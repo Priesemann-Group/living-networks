@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Logistics – Living Networks Symposium 2026</title>
+  <title>Logistics &amp; Registration – Living Networks Symposium 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/main.js" defer></script>
 </head>
@@ -19,41 +19,90 @@
           <span class="brand-mark">LN</span>
           <span class="brand-text">Living Networks Symposium 2026</span>
         </a>
-        <div class="brand-sub">University of Göttingen · CIDAS/CICS</div>
+        <div class="brand-sub">MPI-DS · University of Göttingen · CIDAS/CICS</div>
       </div>
-      <nav class="primary-nav" aria-label="Main">
-        <ul>
-          <li><a href="index.html" class="nav-link">Overview</a></li>
-          <li><a href="background.html" class="nav-link">Background</a></li>
-          <li><a href="speakers.html" class="nav-link">Speakers</a></li>
-          <li><a href="programme.html" class="nav-link">Programme</a></li>
-          <li><a href="logistics.html" class="nav-link nav-link-active">Logistics</a></li>
-        </ul>
-      </nav>
+      <div class="header-right">
+        <nav class="primary-nav" aria-label="Main">
+          <ul>
+            <li><a href="index.html" class="nav-link">Overview</a></li>
+            <li><a href="speakers.html" class="nav-link">Speakers</a></li>
+            <li><a href="programme.html" class="nav-link">Programme</a></li>
+            <li><a href="logistics.html" class="nav-link nav-link-active">Logistics</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <!-- REPLACE '#register' WITH YOUR ACTUAL REGISTRATION LINK -->
+          <a href="#register" class="btn btn-primary nav-register-btn" title="Register for the Symposium">Register</a>
+          <button type="button" id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle dark mode">
+            <svg viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 000-1.41.996.996 0 000 1.41l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>
+            <span>Dark</span>
+          </button>
+        </div>
+      </div>
     </div>
   </header>
 
   <main class="page" id="content">
     <section class="section">
       <div class="section-header">
-        <p class="section-kicker">Practicalities</p>
-        <h1 class="section-title">Venue, travel and accommodation</h1>
+        <h1 class="section-title">Venue, Travel &amp; Registration</h1>
       </div>
       <div class="section-grid">
         <div>
-          <h2>Venue</h2>
-          <p>The symposium will take place at the Aula am Wilhelmsplatz, Wilhelmsplatz 1, 37073 Göttingen, from November 30 – December 2, 2026. <a href="https://www.google.com/maps/search/?api=1&query=Aula+am+Wilhelmsplatz+Wilhelmsplatz+1+37073+G%C3%B6ttingen" target="_blank" rel="noopener noreferrer">View venue on Google Maps</a>.</p>
-          <p>Talks and posters will be hosted in lecture halls and discussion spaces that support both formal presentations and informal exchange.</p>
+          <h2>Venue &amp; Dates</h2>
+          <p>The symposium takes place from <strong>November 30 to December 2, 2026</strong> at:</p>
+          <div style="background: var(--card-bg); padding: 1.2rem 1.4rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); margin-bottom: 1.2rem;">
+            <strong style="font-size: 1.1rem; color: var(--color-text);">Manfred-Eigen-Hörsaal</strong><br>
+            <span style="color: var(--color-accent); font-weight: 600;">Max Planck Institute for Dynamics and Self-Organization (MPI-DS)</span><br>
+            <span style="color: var(--color-text-muted);">Am Fassberg 17, 37077 Göttingen, Germany</span><br>
+            <div style="margin-top: 0.75rem;">
+              <a href="https://www.google.com/maps/search/?api=1&query=Manfred-Eigen-H%C3%B6rsaal+Max+Planck+Institute+for+Dynamics+and+Self-Organization+Am+Fassberg+17+37077+G%C3%B6ttingen" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.35rem 0.95rem; font-size: 0.84rem;">Open in Google Maps &rarr;</a>
+            </div>
+          </div>
+          <p>The Manfred-Eigen-Hörsaal at the Max Planck Institute for Dynamics and Self-Organization (MPI-DS) offers state-of-the-art auditorium facilities, poster display galleries, and comfortable foyer spaces for informal discussions.</p>
 
-          <h2>How to get to Göttingen</h2>
-          <p>Göttingen is located in central Germany in the state of Lower Saxony (<em>Niedersachsen</em>), and as such is very well connected by the Deutsche Bahn high-speed rail system. Those arriving by rail should book tickets for the <strong>Göttingen Central Station (Göttingen Bahnhof)</strong>.</p>
-          <p>For those arriving by plane, the most convenient airport is Frankfurt International Airport (FRA) located in Frankfurt am Main. From the airport, Göttingen can be reached in ~2h via high-speed rail. The most convenient train ticket to Göttingen for those arriving by air can be booked from <em>Frankfurt Flughafen Fernbahnhof</em>, which departs from inside Terminal 1 of the airport and has a direct connection to Göttingen.</p>
-          <p>Göttingen can also be reached from other international airports such as Hannover Airport (HAJ) and Hamburg Airport (HAM). From Hannover, Göttingen is roughly 1h away by regional or high-speed rail via Hannover Hauptbahnhof; from Hamburg, the journey takes around 2.5–3h by train via Hamburg Hauptbahnhof. Both options provide convenient alternatives depending on flight availability and routing.</p>
+          <h2 id="register">Registration &amp; Poster Submissions</h2>
+          <p>Participation is open to researchers, postdocs, and doctoral students across complex systems, neuroscience, physics, sociology, law, and related fields.</p>
+          <ul class="bullet-list">
+            <li><strong>Registration Deadline:</strong> October 15, 2026</li>
+            <li><strong>Poster Abstract Submission Deadline:</strong> October 15, 2026</li>
+            <li><strong>Conference Fee:</strong> Free of charge / Funded by the University of Göttingen (registration required due to room capacity).</li>
+          </ul>
+          <div style="margin: 1.2rem 0;">
+            <!-- REPLACE '#register' WITH YOUR ACTUAL REGISTRATION LINK -->
+            <a class="btn btn-primary" href="#register" title="Register for the Symposium">Register Here &rarr;</a>
+          </div>
+          <p>To register or inquire about submitting a poster, you can also contact the organizing team at <a href="mailto:living-networks@ds.mpg.de">living-networks@ds.mpg.de</a>.</p>
+
+          <h2>How to Reach the Venue (MPI-DS)</h2>
+          <p>Göttingen is centrally located in Germany with direct high-speed ICE railway connections.</p>
+          
+          <h3 style="font-size: 1.05rem; margin-top: 1.2rem;">From Göttingen Train Station (Bahnhof) to MPI-DS</h3>
+          <p>From the central bus station right in front of Göttingen Hauptbahnhof (ZOB / Bahnhof), take <strong>bus line 21, 22, or 23</strong> directly to the bus stop <strong>“Faßberg”</strong> (approx. 15–20 minutes). The MPI-DS campus entrance is located directly adjacent to the bus stop.</p>
+
+          <h3 style="font-size: 1.05rem; margin-top: 1.2rem;">By Plane</h3>
+          <ul class="bullet-list">
+            <li><strong>Frankfurt Airport (FRA):</strong> Direct ICE high-speed trains depart from <em>Frankfurt Flughafen Fernbahnhof</em> (Terminal 1) directly to Göttingen in under 2 hours without train transfers.</li>
+            <li><strong>Hannover Airport (HAJ):</strong> S-Bahn to Hannover Hauptbahnhof and a 35-minute ICE ride to Göttingen (~1h total).</li>
+            <li><strong>Hamburg Airport (HAM):</strong> S-Bahn to Hamburg Hauptbahnhof + ICE to Göttingen (~2.5 hours total).</li>
+          </ul>
         </div>
+
         <aside class="aside-card">
-          <h2 class="aside-title">Accommodation and travel</h2>
-          <p>Information on recommended hotels, local transport, and practical details for invited speakers and participants will be announced in due course.</p>
-          <p>For specific questions regarding logistics or accessibility, please contact the organizing team at <a href="mailto:living-networks@ds.mpg.de">living-networks@ds.mpg.de</a></p>
+          <h2 class="aside-title">Accommodation in Göttingen</h2>
+          <p>We recommend reserving accommodation well in advance. Recommended hotels with convenient access to Göttingen station and bus routes to Faßberg:</p>
+          <ul class="bullet-list">
+            <li><strong>FREIgeist Göttingen Innenstadt:</strong> Berliner Str. 30 (next to train station &amp; bus lines)</li>
+            <li><strong>Hotel Stadt Hannover:</strong> Groner-Tor-Straße 27</li>
+            <li><strong>Eden Hotel Göttingen:</strong> Reinhäuser Landstraße 22a</li>
+            <li><strong>Romantik Hotel Gebhards:</strong> Goethe-Allee 22–23</li>
+            <li><strong>B&amp;B Hotel Göttingen-City:</strong> Maschmühlenweg 19</li>
+          </ul>
+          
+          <div style="margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px solid var(--color-border);">
+            <h3 style="margin-top: 0; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--color-text-muted);">Questions &amp; Assistance</h3>
+            <p style="font-size: 0.9rem; margin: 0;">For logistics inquiries, special accommodations, or visa invitation letters, please contact us at <a href="mailto:living-networks@ds.mpg.de">living-networks@ds.mpg.de</a>.</p>
+          </div>
         </aside>
       </div>
     </section>
@@ -62,13 +111,20 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-logos">
-        <img src="resources/Minerva.png" alt="Max Planck Society" width="120" height="98" loading="lazy">
-        <img src="resources/GOE-Uni.png" alt="University of Göttingen" width="105" height="98" loading="lazy">
-        <img src="resources/logo_cics.png" alt="CICS" width="160" height="98" loading="lazy">
+        <a class="footer-logo-link" href="https://www.uni-goettingen.de/" target="_blank" rel="noopener noreferrer" title="University of Göttingen">
+          <img src="resources/GOE-Uni.png" alt="University of Göttingen Logo" width="100" height="90" loading="lazy">
+        </a>
+        <a class="footer-logo-link" href="https://www.ds.mpg.de/" target="_blank" rel="noopener noreferrer" title="Max Planck Institute for Dynamics and Self-Organization">
+          <img src="resources/Minerva.png" alt="Max Planck Society Minerva Logo" width="120" height="98" loading="lazy">
+        </a>
+        <a class="footer-logo-link" href="https://www.uni-goettingen.de/en/section+complexity%2C+information%2C+cognition%2C+society/701947.html" target="_blank" rel="noopener noreferrer" title="CIDAS Section Complexity, Information, Cognition, Society (CICS)">
+          <img src="resources/logo_cics.png" alt="CICS Logo" width="160" height="98" loading="lazy">
+        </a>
       </div>
       <div class="footer-info">
-        <p>&copy; 2026 Living Networks Symposium – University of Göttingen / CIDAS Section “Complexity, Information, Cognition, Society” (CICS).</p>
-        <p>Contact: <a href="mailto:living-networks@ds.mpg.de">living-networks@ds.mpg.de</a> &nbsp;·&nbsp; <a href="https://priesemann-group.github.io/" target="_blank" rel="noopener noreferrer">Priesemann Group</a> &nbsp;·&nbsp; <a href="https://www.uni-goettingen.de/en/section+complexity%2C+information%2C+cognition%2C+society/701947.html" target="_blank" rel="noopener noreferrer">CICS</a></p>
+        <p>&copy; 2026 Living Networks Symposium &ndash; University of Göttingen / CIDAS Section “Complexity, Information, Cognition, Society” (CICS).</p>
+        <p><strong>Organizing Committee:</strong> Julia Fischer, Greta Jasser, Thomas Kneib, Piklu Mallick, Viola Priesemann</p>
+        <p>Contact: <a href="mailto:living-networks@ds.mpg.de">living-networks@ds.mpg.de</a> &nbsp;·&nbsp; <a href="https://priesemann-group.github.io/" target="_blank" rel="noopener noreferrer">Priesemann Group</a> &nbsp;·&nbsp; <a href="https://www.uni-goettingen.de/en/section+complexity%2C+information%2C+cognition%2C+society/701947.html" target="_blank" rel="noopener noreferrer">CIDAS / CICS Section</a></p>
       </div>
     </div>
   </footer>

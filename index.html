@@ -6,30 +6,39 @@
   <title>Living Networks Symposium 2026 – Göttingen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <a href="index.html" class="skip-link">Skip to content</a>
+    <a href="#content" class="skip-link">Skip to content</a>
     <div class="header-inner">
       <div class="header-left">
         <a href="index.html" class="brand">
           <span class="brand-mark">LN</span>
           <span class="brand-text">Living Networks Symposium 2026</span>
         </a>
-        <div class="brand-sub">University of Göttingen · CIDAS/CICS</div>
+        <div class="brand-sub">MPI-DS · University of Göttingen · CIDAS/CICS</div>
       </div>
-      <nav class="primary-nav" aria-label="Main">
-        <ul>
-          <li><a href="index.html" class="nav-link nav-link-active">Overview</a></li>
-          <li><a href="background.html" class="nav-link">Background</a></li>
-          <li><a href="speakers.html" class="nav-link">Speakers</a></li>
-          <li><a href="programme.html" class="nav-link">Programme</a></li>
-          <li><a href="logistics.html" class="nav-link">Logistics</a></li>
-        </ul>
-      </nav>
+      <div class="header-right">
+        <nav class="primary-nav" aria-label="Main">
+          <ul>
+            <li><a href="index.html" class="nav-link nav-link-active">Overview</a></li>
+            <li><a href="speakers.html" class="nav-link">Speakers</a></li>
+            <li><a href="programme.html" class="nav-link">Programme</a></li>
+            <li><a href="logistics.html" class="nav-link">Logistics</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <!-- REPLACE '#register' WITH YOUR ACTUAL REGISTRATION LINK -->
+          <a href="#register" class="btn btn-primary nav-register-btn" title="Register for the Symposium">Register</a>
+          <button type="button" id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle dark mode">
+            <svg viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 000-1.41.996.996 0 000 1.41l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>
+            <span>Dark</span>
+          </button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -37,9 +46,10 @@
     <section class="hero">
       <div class="hero-layout">
         <div class="hero-text">
-          <p class="hero-kicker">International symposium · University of Göttingen</p>
+          <p class="hero-kicker">International Symposium · Göttingen, Germany</p>
           <h1 class="hero-title">Living Networks: Self-Organization, Manipulation and Information Flow in Neural and Social Systems</h1>
-          <p class="hero-lead">How do brains and societies remain robust while their underlying networks constantly reshape? We bring together perspectives from complex systems, neuroscience and social sciences to explore common principles of self-organization, resilience and manipulation across living networks.</p>
+          <p class="hero-lead">From November 30 to December 2, 2026, international experts across physics, data science, neuroscience, law, and social and political sciences gather at the Max Planck Institute for Dynamics and Self-Organization (MPI-DS) in Göttingen to explore how living networks self-organize, maintain robustness, and respond to manipulation.</p>
+          
           <dl class="hero-meta">
             <div>
               <dt>Dates</dt>
@@ -47,52 +57,83 @@
             </div>
             <div>
               <dt>Location</dt>
-              <dd>Aula am Wilhelmsplatz, Wilhelmsplatz 1, 37073 Göttingen</dd>
+              <dd>Manfred-Eigen-Hörsaal, Max Planck Institute for Dynamics and Self-Organization, Am Fassberg 17, 37077 Göttingen, Germany</dd>
             </div>
             <div>
-              <dt>Organized by</dt>
-              <dd>Julia Fischer, Greta Jasser, Thomas Kneib, Piklu Mallick, Viola Priesemann</dd>
+              <dt>Registration Deadline</dt>
+              <dd>October 15, 2026 &nbsp;·&nbsp; <br> <a href="#register" title="Click to Register" style="font-weight: 600; text-decoration: underline;">Register Here &rarr;</a></dd>
             </div>
             <div>
-              <dt>Supported by</dt>
-              <dd>CIDAS Section “Complexity, Information, Cognition, Society” (CICS)</dd>
+              <dt>Funded &amp; Supported by</dt>
+              <dd>University of Göttingen · CIDAS Section “Complexity, Information, Cognition, Society” (CICS) · Max Planck Institute for Dynamics and Self-Organization (MPI-DS)</dd>
+            </div>
           </dl>
+          
           <div class="hero-actions">
-            <a class="btn btn-primary" href="programme.html">View programme outline</a>
-            <a class="btn btn-secondary" href="speakers.html">Meet the speakers</a>
+            <!-- REPLACE '#register' WITH YOUR ACTUAL REGISTRATION LINK -->
+            <a class="btn btn-primary" href="#register" title="Register for the Symposium">Register Here &rarr;</a>
+            <a class="btn btn-secondary" href="speakers.html">Meet the 19 Keynote Speakers</a>
+            <a class="btn btn-secondary" href="programme.html">Programme Outline</a>
+            <a class="btn btn-secondary" href="logistics.html">Venue &amp; Logistics</a>
           </div>
         </div>
+
         <aside class="hero-aside" aria-labelledby="abstract-heading">
-          <h2 id="abstract-heading" class="aside-title">Symposium abstract</h2>
-          <p>Living networks – from neural circuits to online communities – continually reconfigure their structure, interactions and information flow, while large-scale function often remains remarkably stable. Classic examples include scale-free network architectures and robust information processing despite variable neural representations.</p>
-          <p>We ask whether similar self-organization principles shape these systems, whether robustness and resilience emerge through comparable mechanisms, and how they can be manipulated or disrupted. By combining complex systems theory with sociology, neuroscience and data science, we aim to identify shared principles and crucial differences that govern the emergence of structure, dynamics and information flow in neural and social networks.</p>
+          <h2 id="abstract-heading" class="aside-title">Symposium Abstract</h2>
+          <p>Living Networks, including societies, groups and also brains, are continuously reshaping their structure, interactions, and information flow among nodes &ndash; yet their large-scale structure and function remain largely invariant. Classic examples are scale-free network properties and robust information processing despite variable neural representation.</p>
+          <p>We want to explore whether these networks are shaped by similar self-organization principles, show similar emergence of robustness and resilience, and are potentially also vulnerable to similar manipulation mechanisms.</p>
+          <p>By combining the perspective of complex systems with expertise from sociology and neuroscience, our aim is to identify common principles, but also core differences, that drive the emergence of structure, dynamics, and information flow &ndash; from neural networks to societal dynamics.</p>
         </aside>
       </div>
     </section>
 
-    <section class="section">
+    <!-- ABOUT & BACKGROUND -->
+    <section class="section" id="about">
       <div class="section-header">
-        <p class="section-kicker">At a glance</p>
-        <h2 class="section-title">Why “Living Networks”?</h2>
+        <h2 class="section-title">About the Symposium</h2>
       </div>
-      <div class="section-grid">
-        <div>
-          <p>Networked systems in the brain and in society adapt continuously. New connections are formed, existing ones are weakened, and information pathways are redirected — yet coherent function and behaviour often persist. Understanding how such robustness emerges, and how it can fail, is central to addressing challenges around disinformation, polarization and societal resilience.</p>
-          <p>This symposium creates a space where theorists, modellers and empirical researchers can speak across disciplinary boundaries, and jointly examine how living networks self-organize, process information and respond to intervention.</p>
+      <div style="background: var(--card-bg); border-radius: var(--radius-lg); padding: 1.6rem 1.8rem; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); line-height: 1.8;">
+        <p style="font-size: 1.05rem; margin-top: 0; margin-bottom: 1rem; color: var(--color-text);">
+          From <strong>November 30 to December 2, 2026</strong>, at the <strong>Manfred-Eigen-Hörsaal</strong> (Max Planck Institute for Dynamics and Self-Organization, Göttingen), we bring together international experts across disciplines &ndash; including physics, data science, neuroscience, law, and social and political sciences.
+        </p>
+        <p style="font-size: 1rem; margin-bottom: 1rem; color: var(--color-text-muted);">
+          With invited keynote and contributed talks, poster presentations, and ample time for interdisciplinary discussion, we aim to sharpen our understanding of how self-organization mechanisms drive structure and information flow in social networks as well as neural networks &ndash; with direct implications for understanding disinformation, polarization, and societal resilience.
+        </p>
+        <p style="font-size: 0.95rem; margin-bottom: 0; color: var(--color-text-muted);">
+          The symposium is organized by the <strong>CIDAS Section “Complexity, Information, Cognition, Society” (CICS)</strong>, supported and funded by the <strong>University of Göttingen</strong>, and aims to foster future collaborative research initiatives across disciplines.
+        </p>
+      </div>
+
+      <div style="margin-top: 2.5rem;">
+        <div class="section-header">
+          <h2 class="section-title">Organizing Committee</h2>
         </div>
-        <div class="key-points">
-          <div class="key-point">
-            <h3>Interdisciplinary</h3>
-            <p>Contributions from physics, data science, neuroscience, law and social &amp; political sciences.</p>
-          </div>
-          <div class="key-point">
-            <h3>Focused</h3>
-            <p>Three days of invited talks, contributed presentations, posters and structured discussions.</p>
-          </div>
-          <div class="key-point">
-            <h3>Forward-looking</h3>
-            <p>Designed to seed new collaborative research initiatives within and beyond Göttingen.</p>
-          </div>
+
+        <div class="committee-grid">
+          <article class="committee-card">
+            <h3 class="committee-name">Prof. Dr. Julia Fischer</h3>
+            <p class="committee-affil">German Primate Center (DPZ) / University of Göttingen</p>
+          </article>
+
+          <article class="committee-card">
+            <h3 class="committee-name">Dr. Greta Jasser</h3>
+            <p class="committee-affil">Institute for Democracy Research (IfDem) / University of Göttingen</p>
+          </article>
+
+          <article class="committee-card">
+            <h3 class="committee-name">Prof. Dr. Thomas Kneib</h3>
+            <p class="committee-affil">Campus Institute Data Science (CIDAS), University of Göttingen</p>
+          </article>
+
+          <article class="committee-card">
+            <h3 class="committee-name">Dr. Piklu Mallick</h3>
+            <p class="committee-affil">Max Planck Institute for Dynamics and Self-Organization</p>
+          </article>
+
+          <article class="committee-card">
+            <h3 class="committee-name">Prof. Dr. Viola Priesemann</h3>
+            <p class="committee-affil">Max Planck Institute for Dynamics and Self-Organization / University of Göttingen</p>
+          </article>
         </div>
       </div>
     </section>
@@ -101,13 +142,20 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-logos">
-        <img src="resources/Minerva.png" alt="Max Planck Society" width="120" height="98" loading="lazy">
-        <img src="resources/GOE-Uni.png" alt="University of Göttingen" width="105" height="98" loading="lazy">
-        <img src="resources/logo_cics.png" alt="CICS" width="160" height="98" loading="lazy">
+        <a class="footer-logo-link" href="https://www.uni-goettingen.de/" target="_blank" rel="noopener noreferrer" title="University of Göttingen">
+          <img src="resources/GOE-Uni.png" alt="University of Göttingen Logo" width="100" height="90" loading="lazy">
+        </a>
+        <a class="footer-logo-link" href="https://www.ds.mpg.de/" target="_blank" rel="noopener noreferrer" title="Max Planck Institute for Dynamics and Self-Organization">
+          <img src="resources/Minerva.png" alt="Max Planck Society Minerva Logo" width="120" height="98" loading="lazy">
+        </a>
+        <a class="footer-logo-link" href="https://www.uni-goettingen.de/en/section+complexity%2C+information%2C+cognition%2C+society/701947.html" target="_blank" rel="noopener noreferrer" title="CIDAS Section Complexity, Information, Cognition, Society (CICS)">
+          <img src="resources/logo_cics.png" alt="CICS Logo" width="160" height="98" loading="lazy">
+        </a>
       </div>
       <div class="footer-info">
-        <p>&copy; 2026 Living Networks Symposium – University of Göttingen / CIDAS Section “Complexity, Information, Cognition, Society” (CICS).</p>
-        <p>Contact: <a href="mailto:living-networks@ds.mpg.de">living-networks@ds.mpg.de</a> &nbsp;·&nbsp; <a href="https://priesemann-group.github.io/" target="_blank" rel="noopener noreferrer">Priesemann Group</a> &nbsp;·&nbsp; <a href="https://www.uni-goettingen.de/en/section+complexity%2C+information%2C+cognition%2C+society/701947.html" target="_blank" rel="noopener noreferrer">CICS</a></p>
+        <p>&copy; 2026 Living Networks Symposium &ndash; University of Göttingen / CIDAS Section “Complexity, Information, Cognition, Society” (CICS).</p>
+        <p><strong>Organizing Committee:</strong> Julia Fischer, Greta Jasser, Thomas Kneib, Piklu Mallick, Viola Priesemann</p>
+        <p>Contact: <a href="mailto:living-networks@ds.mpg.de">living-networks@ds.mpg.de</a> &nbsp;·&nbsp; <a href="https://priesemann-group.github.io/" target="_blank" rel="noopener noreferrer">Priesemann Group</a> &nbsp;·&nbsp; <a href="https://www.uni-goettingen.de/en/section+complexity%2C+information%2C+cognition%2C+society/701947.html" target="_blank" rel="noopener noreferrer">CIDAS / CICS Section</a></p>
       </div>
     </div>
   </footer>
