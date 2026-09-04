@@ -27,7 +27,7 @@
       themeToggleBtn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> <span>Light</span>';
       themeToggleBtn.setAttribute('aria-label', 'Switch to light mode');
     } else {
-      themeToggleBtn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg> <span>Dark</span>';
+      themeToggleBtn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 000-1.41.996.996 0 000 1.41l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg> <span>Dark</span>';
       themeToggleBtn.setAttribute('aria-label', 'Switch to dark mode');
     }
   }
@@ -49,16 +49,54 @@
   var path = window.location.pathname.split('/').pop() || 'index.html';
   if (path === '' || path === '/') path = 'index.html';
 
+  // Detect single-page (anchor-based) navigation
+  var isSinglePage = false;
   links.forEach(function (link) {
-    var href = link.getAttribute('href');
-    if (href === path || (path === 'index.html' && href === 'index.html')) {
-      link.classList.add('nav-link-active');
-    } else {
-      link.classList.remove('nav-link-active');
-    }
+    if (link.getAttribute('href').startsWith('#')) isSinglePage = true;
   });
 
+  if (!isSinglePage) {
+    // Multi-page: highlight by filename
+    links.forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (href === path || (path === 'index.html' && href === 'index.html')) {
+        link.classList.add('nav-link-active');
+      } else {
+        link.classList.remove('nav-link-active');
+      }
+    });
+  }
+
+  // Scroll spy for single-page layout
+  if (isSinglePage) {
+    var sections = [];
+    links.forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (href.startsWith('#')) {
+        var el = document.querySelector(href);
+        if (el) sections.push({ el: el, link: link });
+      }
+    });
+
+    function updateActiveNav() {
+      var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+      var current = sections[0];
+      for (var i = sections.length - 1; i >= 0; i--) {
+        if (scrollPos >= sections[i].el.offsetTop - 120) {
+          current = sections[i];
+          break;
+        }
+      }
+      links.forEach(function (link) { link.classList.remove('nav-link-active'); });
+      if (current) current.link.classList.add('nav-link-active');
+    }
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
+  }
+
   // Seamless Continuous Scroll Transitions Between Dedicated Pages
+  // (only active on multi-page layouts)
   var PAGE_SEQUENCE = [
     'index.html',
     'speakers.html',
@@ -67,7 +105,7 @@
   ];
 
   var currentIndex = PAGE_SEQUENCE.indexOf(path);
-  if (currentIndex !== -1) {
+  if (currentIndex !== -1 && !isSinglePage) {
     var isTransitioning = false;
     var accumulatedDelta = 0;
     var deltaThreshold = 75;
@@ -83,10 +121,8 @@
       }, 250);
     }
 
-    // Wheel listener for natural overscroll transition
     window.addEventListener('wheel', function (e) {
       if (isTransitioning) return;
-
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       var windowHeight = window.innerHeight;
       var docHeight = Math.max(
@@ -95,7 +131,6 @@
         document.body.offsetHeight,
         document.documentElement.offsetHeight
       );
-
       var atBottom = (scrollTop + windowHeight) >= (docHeight - 10);
       var atTop = scrollTop <= 5;
 
@@ -103,7 +138,6 @@
         accumulatedDelta += e.deltaY;
         clearTimeout(resetTimer);
         resetTimer = setTimeout(function () { accumulatedDelta = 0; }, 350);
-
         if (accumulatedDelta >= deltaThreshold) {
           navigateSmoothly(PAGE_SEQUENCE[currentIndex + 1], 'next');
         }
@@ -111,7 +145,6 @@
         accumulatedDelta += Math.abs(e.deltaY);
         clearTimeout(resetTimer);
         resetTimer = setTimeout(function () { accumulatedDelta = 0; }, 350);
-
         if (accumulatedDelta >= deltaThreshold) {
           navigateSmoothly(PAGE_SEQUENCE[currentIndex - 1], 'prev');
         }
@@ -120,19 +153,15 @@
       }
     }, { passive: true });
 
-    // Touch listener for mobile gesture transitions
     var touchStartY = 0;
     window.addEventListener('touchstart', function (e) {
-      if (e.touches.length === 1) {
-        touchStartY = e.touches[0].clientY;
-      }
+      if (e.touches.length === 1) touchStartY = e.touches[0].clientY;
     }, { passive: true });
 
     window.addEventListener('touchend', function (e) {
       if (isTransitioning || e.changedTouches.length === 0) return;
       var touchEndY = e.changedTouches[0].clientY;
       var deltaY = touchStartY - touchEndY;
-
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       var windowHeight = window.innerHeight;
       var docHeight = document.documentElement.scrollHeight;
@@ -147,6 +176,3 @@
     }, { passive: true });
   }
 })();
-
-
-
