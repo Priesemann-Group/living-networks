@@ -1,0 +1,123 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1.2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\usepackage[sfdefault]{nunito}
+
+\definecolor{TealDark}{HTML}{1D5F57}
+\definecolor{TealPrimary}{HTML}{2F8379}
+\definecolor{TealMedium}{HTML}{479E93}
+\definecolor{Coral}{HTML}{DF684D}
+\definecolor{PosterBg}{HTML}{F6F2E9}
+
+\pagestyle{empty}
+
+\begin{document}
+\pagecolor{PosterBg}
+
+% --- HEADER ---
+\noindent
+\begin{minipage}[t]{0.7\textwidth}
+  {\fontsize{26}{30}\selectfont\textbf{\color{TealPrimary}Living Networks}}\\[4pt]
+  {\fontsize{11}{14}\selectfont\textbf{\color{TealMedium}Self-Organization, Manipulation and Information Flow in Neural and Social Systems}}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.28\textwidth}
+  \raggedleft
+  \includegraphics[height=1.1cm]{resources/Minerva.png}\hspace{4pt}
+  \includegraphics[height=1.1cm]{resources/logo_cics.png}\hspace{4pt}
+  \includegraphics[height=1.1cm]{resources/GOE-Uni.png}
+\end{minipage}
+
+\vspace{12pt}
+
+% --- 2-COLUMN BODY ---
+\noindent
+\begin{minipage}[t]{0.46\textwidth}
+  % DATE BADGE
+  \begin{tcolorbox}[colback=TealPrimary,colframe=TealPrimary,arc=3mm,coltext=white,center,halign=center]
+    {\fontsize{20}{22}\selectfont\textbf{30 Nov -- 02 Dec 2026}}\\[4pt]
+    {\footnotesize\textbf{Registration Deadline: Oct 15, 2026}}
+  \end{tcolorbox}
+
+  \vspace{6pt}
+  % CALLOUT
+  \begin{tcolorbox}[colback=white!80!gray,colframe=gray!60!black,arc=2mm,center,halign=center]
+    \textit{\textbf{\fontsize{11}{13}\selectfont Register using the QR code and bring a poster}}
+  \end{tcolorbox}
+
+  \vspace{6pt}
+  % ABOUT
+  {\large\textbf{\color{TealDark}About the symposium}}\\[4pt]
+  {\footnotesize
+  Living Networks, including societies, groups and brains, continuously reshape their structure, interactions, and information flow---yet their large-scale function remains remarkably invariant.\\[4pt]
+  This three-day international symposium combines perspectives from complex systems, physics, data science, neuroscience, and sociology to uncover common principles of self-organization, resilience, and vulnerability to manipulation across systems and scales.\\[4pt]
+  \rule{\textwidth}{0.4pt}\\[3pt]
+  \textbf{Organized by:} Julia Fischer, Greta Jasser, Thomas Kneib, Piklu Mallick, Viola Priesemann.
+  }
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.50\textwidth}
+  % SPEAKERS
+  {\large\textbf{\color{TealPrimary}Keynote Speakers}}\\[6pt]
+  \begin{minipage}[t]{0.48\textwidth}
+    \begin{itemize}[leftmargin=*,itemsep=1pt]
+      \footnotesize\color{TealDark}\bfseries
+      \item Prof. Dr. A. Bizyaeva
+      \item Dr. Serge Galam
+      \item Prof. Dr. M. Galesic
+      \item Prof. Dr. Y. Moreno
+      \item Prof. Dr. J. Suckale
+      \item Prof. Dr. K. Sznajd-Weron
+      \item Prof. Dr. J. Hainmüller
+      \item Prof. Dr. U. Daxecker
+      \item Prof. Dr. C. De Dreu
+      \item Dr. S. Bauer Mikulovic
+    \end{itemize}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \begin{itemize}[leftmargin=*,itemsep=1pt]
+      \footnotesize\color{TealDark}\bfseries
+      \item Dr. P. Lorenz-Spreen
+      \item Prof. Dr. T. Gross
+      \item Prof. Dr. D. Garcia
+      \item Dr. G. De Marzo
+      \item Prof. Dr. M. Mäs
+      \item Dr. E. Olbrich
+      \item Dr. Vera Schmitt
+      \item Prof. Dr. L. Ulbricht
+      \item Prof. Dr. K. Wiesner
+    \end{itemize}
+  \end{minipage}
+
+  \vspace{10pt}
+  \begin{tcolorbox}[colback=TealMedium!30!white,colframe=TealMedium,arc=2mm,center,halign=center]
+    {\scriptsize\textit{Find out more and register here:}}\\[2pt]
+    {\footnotesize\textbf{\url{https://priesemann-group.github.io/living-networks}}}
+  \end{tcolorbox}
+\end{minipage}
+
+\vfill
+
+% --- BOTTOM VENUE & QR ---
+\begin{tcolorbox}[colback=white,colframe=TealMedium!50!white,arc=3mm]
+  \begin{minipage}[c]{0.65\textwidth}
+    {\textbf{\color{TealDark}Manfred-Eigen-Hörsaal}}\\[2pt]
+    {\footnotesize Max Planck Institute for Dynamics and Self-Organization}\\
+    {\scriptsize Am Faßberg 17, 37077 Göttingen, Germany}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[c]{0.3\textwidth}
+    \raggedleft
+    \textbf{\color{Coral}\Large Scan me} \quad
+    \includegraphics[height=1.6cm]{resources/qr_code.svg}
+  \end{minipage}
+\end{tcolorbox}
+
+\end{document}

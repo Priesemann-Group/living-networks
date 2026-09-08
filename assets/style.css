@@ -257,9 +257,9 @@ a:hover { color: var(--color-accent-dark); text-decoration: underline; }
 }
 .hero-title {
   font-family: "Instrument Serif", "Georgia", serif;
-  font-size: clamp(2.3rem, 4.5vw, 3.4rem);
+  font-size: clamp(2.0rem, 4.0vw, 3.0rem);
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   margin: 0 0 1rem;
   color: var(--color-text);
 }
